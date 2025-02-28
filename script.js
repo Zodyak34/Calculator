@@ -1,6 +1,6 @@
+const screen = document.querySelector('.screen');
 const buttons = document.querySelectorAll('.button');
-let buttonValue;
-let calculation = parseInt(document.querySelector(".screen").value);
+let calculation = "";
 
 buttons.forEach(button => {
     button.addEventListener('click', clickHandler)
@@ -8,15 +8,30 @@ buttons.forEach(button => {
 
 function clickHandler(event) {
     const button = event.target;
-    buttonValue = button.value;
-    if (!isNaN(buttonValue)) {
-        buttonValue = parseInt(buttonValue);
+    let buttonValue = button.value;
+    if (buttonValue === "C") {
+        clear();
+    } else if (buttonValue === "=") {
+        solve();
+    } else {
+        updateDisplay(buttonValue);
     }
     console.log(buttonValue);
 }
 
-function updateAnswer(value) {
-    calculation += value;
-    document.querySelector(".screen").innerText = calculation;
-    console.log(calculation);
+function solve() {
+
+}
+
+function clear() {
+    screen.value = "0";
+    calculation = "";
+}
+
+function updateDisplay(buttonValue) {
+    if (parseInt(screen.value) === 0 && !isNaN(buttonValue)) {
+        screen.value = "";
+    }
+    screen.value += buttonValue;
+    calculation += buttonValue;
 }
