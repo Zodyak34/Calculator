@@ -9,26 +9,72 @@
 <body>
   <section>
     <div class="calculator">
-      <label>
-        <input type="text" class="screen">
-      </label>
-      <button class="buttons" id="clear">C</button>
-      <button class="buttons" id="1">1</button>
-      <button class="buttons" id="2">2</button>
-      <button class="buttons" id="3">3</button>
-      <button class="buttons" id="divide">/</button>
-      <button class="buttons" id="4">4</button>
-      <button class="buttons" id="5">5</button>
-      <button class="buttons" id="6">6</button>
-      <button class="buttons" id="multiply">*</button>
-      <button class="buttons" id="7">7</button>
-      <button class="buttons" id="8">8</button>
-      <button class="buttons" id="9">9</button>
-      <button class="buttons" id="subtract">-</button>
-      <button class="buttons" id="0">0</button>
-      <button class="buttons" id="decimal">.</button>
-      <button class="buttons" id="solve">=</button>
-      <button class="buttons" id="add">+</button>
+      <table>
+        <tr>
+          <td colspan="3">
+            <input type="text" class="screen">
+          </td>
+          <td>
+            <input type="button" value="C" class="button" id="clear">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="1" class="button" id="1">
+          </td>
+          <td>
+            <input type="button" value="2" class="button" id="2">
+          </td>
+          <td>
+            <input type="button" value="3" class="button" id="3">
+          </td>
+          <td>
+            <input type="button" value="/" class="button" id="divide">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="4" class="button" id="4">
+          </td>
+          <td>
+            <input type="button" value="5" class="button" id="5">
+          </td>
+          <td>
+            <input type="button" value="6" class="button" id="6">
+          </td>
+          <td>
+            <input type="button" value="*" class="button" id="multiply">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="7" class="button" id="7">
+          </td>
+          <td>
+            <input type="button" value="8" class="button" id="8">
+          </td>
+          <td>
+            <input type="button" value="9" class="button" id="9">
+          </td>
+          <td>
+            <input type="button" value="-" class="button" id="subtract">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="0" class="button" id="0">
+          </td>
+          <td>
+            <input type="button" value="." class="button" id="decimal">
+          </td>
+          <td>
+            <input type="button" value="=" class="button" id="solve">
+          </td>
+          <td>
+            <input type="button" value="+" class="button" id="add">
+          </td>
+        </tr>
+      </table>
     </div>
   </section>
 </body>
