@@ -25,3 +25,12 @@ table {
     border-radius: 5px;
     border: 2px solid black;
 }
+#clear {
+    background-color: lightcoral;
+}
+#solve {
+    background-color: lightgreen;
+}
+#divide, #multiply, #subtract, #add {
+    background-color: orange;
+}
