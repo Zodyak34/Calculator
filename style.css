@@ -1,0 +1,36 @@
+h1 {
+    font-size: 50px;
+}
+section {
+    text-align: center;
+}
+table {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: lightblue;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.screen {
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+#clear {
+    background-color: lightcoral;
+}
+#solve {
+    background-color: lightgreen;
+}
+#divide, #multiply, #subtract, #add {
+    background-color: orange;
+}
