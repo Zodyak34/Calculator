@@ -20,7 +20,19 @@ function clickHandler(event) {
 }
 
 function solve() {
+    try {
+        if (calculation.includes("/0")) {
+            throw new Error("Can not divide by 0");
+        }
 
+        const result = eval(calculation);
+        screen.value = result;
+        calculation = result.toString();
+
+    } catch (error) {
+        screen.value = "Error";
+        calculation = "";
+    }
 }
 
 function clear() {
