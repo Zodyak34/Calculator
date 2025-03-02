@@ -27,12 +27,20 @@ function clickHandler(event) {
 function solve() {
     //use a try catch so if there is an error in the calculation it will be caught and the program will keep running
     try {
-        //checks that user is not trying to divide by 0 and throws an error if they are, display shows infinity without
+        /*checks that user is not trying to divide by 0 and throws an error if they are, display shows infinity without
+            did not account for users trying to divide by decimals beginning with 0, thought of a better solution below
         if (calculation.includes("/0")) {
             throw new Error("Can not divide by 0");
-        }
+        }*/
+
         //does the math in the calculation string and sets the result to result
         const result = eval(calculation);
+        console.log(result);
+
+        //check if user is trying to divide by 0, also allows user to divide by decimals starting with 0 (10/0.1 = 100)
+        if (result.toString() === "Infinity"){
+            throw new Error("Can not divide by 0");
+        }
         //set the display to show result
         screen.value = result;
         //convert the value of result from a number to a string
